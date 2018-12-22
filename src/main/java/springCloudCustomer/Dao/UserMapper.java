@@ -3,6 +3,7 @@ package springCloudCustomer.Dao;
 import springCloudCustomer.domain.User;
 
 public interface UserMapper {
+
     int deleteByPrimaryKey(Integer uid);
 
     int insert(User record);

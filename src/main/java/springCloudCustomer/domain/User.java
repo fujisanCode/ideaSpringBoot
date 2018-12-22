@@ -1,6 +1,10 @@
 package springCloudCustomer.domain;
 
+import lombok.ToString;
+
+@ToString
 public class User {
+
     private Integer uid;
 
     private String username;
