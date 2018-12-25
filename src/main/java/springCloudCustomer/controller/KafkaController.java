@@ -20,7 +20,7 @@ public class KafkaController {
             log.info("kafka's msg is -> {}.", msg);
             int sendCount = Integer.parseInt(msg);
             for(;sendCount>0;sendCount--){
-                kafkaTemplate.send("test","sendCount",msg);
+                kafkaTemplate.send("test","sendCount",String.valueOf(sendCount));
             }
             String sendSucc = "kafka send msg success.";
             log.info(sendSucc);
