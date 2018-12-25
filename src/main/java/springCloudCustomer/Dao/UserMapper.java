@@ -1,7 +1,8 @@
 package springCloudCustomer.Dao;
 
+import org.springframework.stereotype.Component;
 import springCloudCustomer.domain.User;
-
+@Component
 public interface UserMapper {
 
     int deleteByPrimaryKey(Integer uid);

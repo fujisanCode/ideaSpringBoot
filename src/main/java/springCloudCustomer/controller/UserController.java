@@ -11,15 +11,13 @@ import springCloudCustomer.domain.User;
 @RestController
 @Slf4j
 public class UserController {
-    @Autowired
-    private UserMapper userMapper;
+  @Autowired private UserMapper userMapper;
 
-    @GetMapping("/findUser/{uId}")
-    public User findUser(@PathVariable int uId){
-        log.info("findUser para -> {}.", uId);
-        User getUser = userMapper.selectByPrimaryKey(uId);
-        log.info("findUser return -> {}.", getUser);
-        return  getUser;
-    }
-
+  @GetMapping("/findUser/{uId}")
+  public User findUser(@PathVariable int uId) {
+    log.info("findUser para -> {}.", uId);
+    User getUser = userMapper.selectByPrimaryKey(uId);
+    log.info("findUser return -> {}.", getUser);
+    return getUser;
+  }
 }
